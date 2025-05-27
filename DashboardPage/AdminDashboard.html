@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../DashboardPage/Dashboard.css">
+    <title>Admin Dashboard</title>
+    <script src="AdminDashboard.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2 style="font-size: 20px;">Dern-Support</h2>
+                <p style="font-size: 12px; opacity: 0.8;">Admin Panel</p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">All Requests</a>
+                <a href="../MainPage/MainPage.html">Leave</a>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1 style="font-size: 24px;">Admin Dashboard</h1>
+                <div class="user-info">
+                    <div class="user-avatar">AD</div>
+                    <div>
+                        <span>Welcome, Admin!</span>
+                        <span class="account-type">ADMINISTRATOR</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-header">
+                    <h2 style="font-size: 18px;">All Support Requests</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ticket ID</th>
+                            <th>Issue</th>
+                            <th>Customer</th>
+                            <th>Customer Type</th>
+                            <th>Submitted</th>
+                            <th>Status</th>
+                            <th>Urgency</th>
+                        </tr>
+                    </thead>
+                    <tbody id="requestsTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

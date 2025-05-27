@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../DashboardPage/Dashboard.css">
+    <title>Request Details</title>
+    <script src="RequestDetailsPage.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2 style="font-size: 20px;">Dern-Support</h2>
+                <p style="font-size: 12px; opacity: 0.8;" id="accountTypeDisplay">Request Details</p>
+            </div>
+            <nav class="sidebar-nav" id="sidebarNav">
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1 style="font-size: 24px;">Support Request Details</h1>
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">US</div>
+                    <div>
+                        <span id="welcomeMessage">Welcome!</span>
+                        <span class="account-type" id="accountType">USER</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 style="font-size: 18px;">Request Information</h2>
+                </div>
+
+                <div class="request-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Ticket ID:</span>
+                        <span class="detail-value" id="ticketId">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Status:</span>
+                        <span class="detail-value" id="status">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Title:</span>
+                        <span class="detail-value" id="title">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Customer Type:</span>
+                        <span class="detail-value" id="customerType">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Problem Type:</span>
+                        <span class="detail-value" id="problemType">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Urgency:</span>
+                        <span class="detail-value" id="urgency">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Submitted:</span>
+                        <span class="detail-value" id="submittedDate">-</span>
+                    </div>
+                    <div class="detail-row full-width">
+                        <span class="detail-label">Description:</span>
+                        <div class="detail-value" id="description">-</div>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="detail-label">Estimated Price:</span>
+                        <span class="detail-value" id="estimatedPrice">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Price Approved:</span>
+                        <span class="detail-value" id="priceApproved">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

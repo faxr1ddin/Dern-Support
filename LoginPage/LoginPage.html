@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dern-Support - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="LoginPage.css">
+    <script src="LoginPage.js"></script>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-left">
+            <h1>Welcome to Dern-Support</h1>
+            <p>Get fast, reliable technical support when you need it most. Manage your support requests, track repairs,
+                and access our knowledge base.</p>
+        </div>
+        <div class="login-right">
+            <div class="login-header">
+                <h2>Welcome Back</h2>
+                <p>Sign in to manage your support requests</p>
+            </div>
+
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                </div>
+
+                <button type="submit" class="login-button" id="signInBtn">Sign In</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Don't have an account? <a href="../SignUpPage/SignUpPage.html">Register here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

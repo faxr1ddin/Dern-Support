@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Dashboard.css">
+    <title>Dashboard</title>
+    <script src="Dashboard.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2 style="font-size: 20px;">Dern-Support</h2>
+                <p style="font-size: 12px; opacity: 0.8;">Individual Account</p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#" id="myRequestsLink">My Support Requests</a>
+                <a href="#">Knowledge Base</a>
+                <a href="../MainPage/MainPage.html">Leave</a>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1 style="font-size: 24px;">My Dashboard</h1>
+                <div class="user-info">
+                    <div class="user-avatar">JS</div>
+                    <div>
+                        <span id="welcomeMessage">Welcome, John Smith!</span>
+                        <span class="account-type">INDIVIDUAL</span>
+                    </div>
+                </div>
+            </div>
+
+            <p style="color: #555; margin-bottom: 20px;">How can we assist you with your devices today?</p>
+
+            <div class="quick-actions">
+                <div class="action-card" id="supportRequestCard">
+                    <div class="action-icon">🛠️</div>
+                    <h3>New Support Request</h3>
+                    <p>Report an issue with your device</p>
+                </div>
+                <div class="action-card">
+                    <div class="action-icon">📅</div>
+                    <h3>Schedule Repair</h3>
+                    <p>Book an appointment for your device</p>
+                </div>
+                <div class="action-card">
+                    <div class="action-icon">🏢</div>
+                    <h3>Device Drop-off</h3>
+                    <p>Arrange to bring your device to us</p>
+                </div>
+                <div class="action-card">
+                    <div class="action-icon">💰</div>
+                    <h3>Get Quote</h3>
+                    <p>Estimate repair costs</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 style="font-size: 18px;" id="requestsHeader">My Recent Support Requests</h2>
+                    <a href="#" class="btn-text" id="viewAllRequests">View All</a>
+                    <a href="#" class="btn-text" id="showRecentRequests" style="display: none;">Show Recent</a>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ticket ID</th>
+                                <th>Issue</th>
+                                <th>Submitted</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="requestsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 style="font-size: 18px;">Knowledge Base</h2>
+                    <a href="#" class="btn-text">Browse All</a>
+                </div>
+                <div class="knowledge-base-categories">
+                    <a href="https://www.laptopmag.com/articles/common-laptop-problems-fixes"
+                        class="category-card-link">
+                        <div class="category-card">
+                            <h3>Laptop Issues</h3>
+                        </div>
+                    </a>
+                    <a href="https://support.microsoft.com/en-us" class="category-card-link">
+                        <div class="category-card">
+                            <h3>Software Help</h3>
+                        </div>
+                    </a>
+                    <a href="https://learn.microsoft.com/en-us/defender-endpoint/safety-scanner-download"
+                        class="category-card-link">
+                        <div class="category-card">
+                            <h3>Virus Removal</h3>
+                        </div>
+                    </a>
+                    <a href="https://www.easeus.com/data-recovery-software/" class="category-card-link">
+                        <div class="category-card">
+                            <h3>Data Recovery</h3>
+                        </div>
+                    </a>
+                    <a href="https://support.google.com/android/#topic=7313011" class="category-card-link">
+                        <div class="category-card">
+                            <h3>Mobile Devices</h3>
+                        </div>
+                    </a>
+                    <a href="https://support.hp.com/us-en?openCLC=true" class="category-card-link">
+                        <div class="category-card">
+                            <h3>Printers</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("supportRequestCard").addEventListener("click", function () {
+            window.location.href = "../SubmitRequestPage/SubmitRequestPage.html";
+        });
+    </script>
+</body>
+
+</html>

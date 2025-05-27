@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MainPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>MainPage</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <span>Dern-Support</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#knowledge-base">Knowledge Base</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="../LoginPage/LoginPage.html" class="register-login">Register/Login</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Expert IT Support for <span>Businesses</span> & <span>Individuals</span>
+            </h1>
+            <p class="hero-subtitle">
+                Get fast, reliable technical support when you need it most. Schedule repairs, get instant quotes, and
+                access our extensive knowledge base 24/7.
+            </p>
+            <div class="hero-buttons">
+                <a href="../LoginPage/LoginPage.html" class="hero-button primary-button">
+                    <i class="fas fa-plus-circle"></i> Submit a Request
+                </a>
+                <a href="#knowledge-base" class="hero-button secondary-button">
+                    <i class="fas fa-book"></i> Knowledge Base
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="about">
+        <div class="section-header">
+            <h2 class="section-title">Our Comprehensive Support System</h2>
+            <p class="section-subtitle">
+                Dern-Support provides end-to-end IT solutions designed to streamline operations and enhance your
+                experience
+            </p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-user-cog"></i>
+                </div>
+                <h3 class="feature-title">Customer Accounts</h3>
+                <p class="feature-description">
+                    Easy account management for both businesses and individuals with personalized dashboards.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="feature-title">Support Requests</h3>
+                <p class="feature-description">
+                    Submit detailed tickets, schedule repairs, and get accurate cost estimates.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="feature-title">Knowledge Base</h3>
+                <p class="feature-description">
+                    Extensive self-help resources with step-by-step troubleshooting guides.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-boxes"></i>
+                </div>
+                <h3 class="feature-title">Inventory Management</h3>
+                <p class="feature-description">
+                    Real-time tracking of spare parts with advanced search functionality.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3 class="feature-title">Job Scheduling</h3>
+                <p class="feature-description">
+                    Visual calendar interface with automated reminders for scheduled jobs.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="feature-title">Data Analytics</h3>
+                <p class="feature-description">
+                    Identify trends and patterns to improve service delivery and business decisions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Base Section -->
+    <section class="knowledge-base" id="knowledge-base">
+        <div class="kb-header">
+            <h2 class="kb-title">Knowledge Base</h2>
+            <p class="kb-subtitle">
+                Find solutions to common problems and learn how to troubleshoot issues yourself
+            </p>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search for solutions...">
+            <button class="search-button">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+        <div class="categories">
+            <div class="category active">All Topics</div>
+            <div class="category">Hardware</div>
+            <div class="category">Software</div>
+            <div class="category">Networking</div>
+            <div class="category">Security</div>
+            <div class="category">Mobile</div>
+        </div>
+        <div class="articles-container">
+            <div class="article-card">
+                <a href="https://www.dell.com/support/kbdoc/en-us/000124346/dell-latitude-5591-system-guide"
+                    class="card-link">
+                    <div class="article-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80')">
+                        <span class="article-category">Hardware</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Diagnosing Common Laptop Hardware Issues</h3>
+                        <p class="article-description">
+                            Learn to identify symptoms of failing components like hard drives, RAM, and cooling systems
+                            before they cause major problems.
+                        </p>
+                        <a href="https://www.dell.com/support/kbdoc/en-us/000124346/dell-latitude-5591-system-guide"
+                            class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </a>
+            </div>
+            <div class="article-card">
+                <a href="https://support.microsoft.com/en-us/windows" class="card-link">
+                    <div class="article-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                        <span class="article-category">Software</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Fixing Windows Update Errors</h3>
+                        <p class="article-description">
+                            Step-by-step guide to troubleshoot and resolve common Windows update problems that prevent
+                            system updates.
+                        </p>
+                        <a href="https://support.microsoft.com/en-us/windows" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </a>
+            </div>
+            <div class="article-card">
+                <a href="https://www.tp-link.com/us/support/faq/" class="card-link">
+                    <div class="article-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80')">
+                        <span class="article-category">Networking</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Home Network Troubleshooting</h3>
+                        <p class="article-description">
+                            Comprehensive guide to identify and fix common WiFi and Ethernet connection problems in home
+                            networks.
+                        </p>
+                        <a href="https://www.tp-link.com/us/support/faq/" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <h2 class="section-title">Contact Our Support Team</h2>
+            <p class="section-subtitle">
+                We're here to help with all your IT technical support needs. Choose the contact method that works best
+                for you.
+            </p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3>Phone Support</h3>
+                        <p>Available 24/7 for urgent issues<br><strong>(555) 123-4567</strong></p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3>Email Support</h3>
+                        <p>Typically responds within 2 business hours<br><strong>support@dern-support.com</strong></p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3>Live Chat</h3>
+                        <p>Available Monday-Friday, 8am-6pm<br><strong>Start chat from your dashboard</strong></p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3>Office Locations</h3>
+                        <p>
+                            123 Tech Street, Silicon Valley, CA 94000<br>
+                            456 Support Ave, Boston, MA 02100<br>
+                            <strong>(555) 123-4567</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Subject</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Support Type</label>
+                        <select class="form-control">
+                            <option>Technical Support</option>
+                            <option>Billing Inquiry</option>
+                            <option>General Question</option>
+                            <option>Feedback</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span>Dern-Support</span>
+                </div>
+                <p class="footer-about">
+                    Specializing in comprehensive IT solutions for businesses and individuals. We make technology work
+                    for you.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#knowledge-base">Knowledge Base</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">IT Support</a></li>
+                    <li><a href="#">Hardware Repair</a></li>
+                    <li><a href="#">Software Solutions</a></li>
+                    <li><a href="#">Network Setup</a></li>
+                    <li><a href="#">Data Recovery</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> support@dern-support.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Dern-Support. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
+                    Service</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

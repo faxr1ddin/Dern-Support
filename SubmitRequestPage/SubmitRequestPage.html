@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SubmitRequestPage.css">
+    <title>SubmitRequest</title>
+    <script src="SubmitRequestPage.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Dern-Support</div>
+            <nav>
+                <ul>
+                    <li><a href="../DashboardPage/Dashboard.html">Dashboard</a></li>
+                    <li><a href="../DashboardPage/Dashboard.html">Knowledge Base</a></li>
+                    <li><a href="../DashboardPage/Dashboard.html">My Requests</a></li>
+                    <li><a href="../DashboardPage/Dashboard.html">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <aside class="sidebar">
+                <h3>Support Center</h3>
+                <ul>
+                    <li><a href="../DashboardPage/Dashboard.html"><i>📋</i> My Requests</a></li>
+                    <li><a href="../SubmitRequestPage/SubmitRequestPage.html"><i>➕</i> Submit Request</a></li>
+                    <li><a href="../DashboardPage/Dashboard.html"><i>📚</i> Knowledge Base</a></li>
+                </ul>
+            </aside>
+
+            <main class="content">
+
+                <div class="form-container">
+                    <form id="supportRequestForm">
+                        <div class="form-group">
+                            <label for="requestTitle">Request Title*</label>
+                            <input type="text" id="requestTitle" class="form-control"
+                                placeholder="Brief description of your issue" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Customer Type*</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="individual" name="customerType" value="individual" checked>
+                                    <label for="individual">Individual</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="business" name="customerType" value="business">
+                                    <label for="business">Business</label>
+                                </div>
+                            </div>
+
+                            <div id="individualInfo" class="customer-type-info show">
+                                For individual customers, please drop off your device at our office or arrange courier
+                                delivery.
+                            </div>
+                            <div id="businessInfo" class="customer-type-info">
+                                For business customers, we provide on-site support. Please provide your business
+                                address.
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="problemType">Problem Type*</label>
+                                <select id="problemType" class="form-control" required>
+                                    <option value="">Select problem type</option>
+                                    <option value="hardware">Hardware Issue</option>
+                                    <option value="software">Software Issue</option>
+                                    <option value="network">Network Issue</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="urgency">Urgency*</label>
+                                <select id="urgency" class="form-control" required>
+                                    <option value="low">Low (Can wait a few days)</option>
+                                    <option value="medium" selected>Medium (Need within 48 hours)</option>
+                                    <option value="high">High (Critical - Need ASAP)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Problem Description*</label>
+                            <textarea id="description" class="form-control"
+                                placeholder="Please describe your issue in detail..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="attachments">Attachments (if any)</label>
+                            <input type="file" id="attachments" class="form-control" multiple>
+                            <small>You can upload screenshots or photos of the issue (max 5MB each)</small>
+                        </div>
+
+                        <div class="form-group price-estimation">
+                            <label>Estimated Cost</label>
+                            <div id="priceEstimation">
+                                <p>Price will be estimated after selecting problem type</p>
+                            </div>
+                            <div class="form-group" id="approvalSection" style="display: none;">
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="approveEstimate" required>
+                                    <label for="approveEstimate">I approve the estimated cost*</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-primary" id="submitRequest">Submit Request</button>
+                        </div>
+
+                        <div class="knowledge-base-link">
+                            <p>Before submitting, check our <a href="../DashboardPage/Dashboard.html">Knowledge Base</a>
+                                - you might find a quick
+                                solution!</p>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
