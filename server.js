@@ -33,7 +33,7 @@ async function startServer() {
         const supportRequestsCollection = db.collection('supportRequests');
 
         // Register
-        app.post("${BASE_URL}/auth/register", async (req, res) => {
+        app.post("/auth/register", async (req, res) => {
             const newUser = req.body;
             const emailExists = await usersCollection.findOne({ email: newUser.email });
 
@@ -62,7 +62,7 @@ async function startServer() {
             }
         });
 
-        app.get("${BASE_URL}/api/user/:email", async (req, res) => {
+        app.get("/api/user/:email", async (req, res) => {
             const user = await usersCollection.findOne({ email: req.params.email });
 
             if (user) {
@@ -72,7 +72,7 @@ async function startServer() {
             }
         });
 
-        app.post("${BASE_URL}/api/support-requests", async (req, res) => {
+        app.post("/api/support-requests", async (req, res) => {
             const requestData = req.body;
             requestData.ticketId = `#DS-${Math.floor(1000 + Math.random() * 9000)}`;
             requestData.date = new Date().toISOString();
@@ -87,7 +87,7 @@ async function startServer() {
             }
         });
 
-        app.get("${BASE_URL}/api/support-requests/:email", async (req, res) => {
+        app.get("/api/support-requests/:email", async (req, res) => {
             try {
                 const userRequests = await supportRequestsCollection.find({ email: req.params.email }).toArray();
                 res.json(userRequests);
@@ -97,7 +97,7 @@ async function startServer() {
             }
         });
 
-        app.get("${BASE_URL}/api/support-request/:ticketId", async (req, res) => {
+        app.get("/api/support-request/:ticketId", async (req, res) => {
             try {
                 const request = await supportRequestsCollection.findOne({ ticketId: req.params.ticketId });
                 if (request) {
@@ -112,7 +112,7 @@ async function startServer() {
         });
 
         // Get all users (for admin)
-        app.get("${BASE_URL}/api/users", async (req, res) => {
+        app.get("/api/users", async (req, res) => {
             try {
                 const users = await usersCollection.find({}).toArray();
                 res.json(users);
@@ -122,7 +122,7 @@ async function startServer() {
             }
         });
 
-        app.get("${BASE_URL}/api/support-requests", async (req, res) => {
+        app.get("/api/support-requests", async (req, res) => {
             try {
                 const requests = await supportRequestsCollection.find({}).toArray();
                 res.json(requests);
