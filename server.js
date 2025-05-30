@@ -2,9 +2,12 @@ const express = require('express');
 const cors = require('cors');
 const { MongoClient } = require('mongodb');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Server running at port ${port}`);
+});
 
-const url = 'mongodb://localhost:27017';
+const url = process.env.MONGODB_URI || 'mongodb+srv://dern-support-admin:<db_password>@cluster0.2nivx1g.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const dbName = 'dernSupport';
 
 app.use(cors());
