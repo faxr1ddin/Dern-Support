@@ -46,7 +46,7 @@ async function startServer() {
         });
 
         // Login
-        app.post("${BASE_URL}/auth/login", async (req, res) => {
+        app.post("/auth/login", async (req, res) => {
             const { email, password } = req.body;
             const user = await usersCollection.findOne({ email, password });
 
