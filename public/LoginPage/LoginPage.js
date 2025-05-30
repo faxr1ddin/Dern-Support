@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 async function initializeDefaultAdmin() {
     try {
-        const response = await fetch('http://localhost:3000/auth/login', {
+        const response = await fetch('https://dern-support-official-7zzw.onrender.com/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ async function createDefaultAdmin() {
             createdAt: new Date().toISOString()
         };
 
-        const response = await fetch('http://localhost:3000/auth/register', {
+        const response = await fetch('https://dern-support-official-7zzw.onrender.com/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ async function handleLogin(event) {
     const password = document.getElementById('password').value;
 
     try {
-        const response = await fetch('http://localhost:3000/auth/login', {
+        const response = await fetch('https://dern-support-official-7zzw.onrender.com/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
