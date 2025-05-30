@@ -141,20 +141,20 @@ console.log("MongoDB URI:", process.env.MONGODB_URI);
 const express = require('express');
 const cors = require('cors');
 const { MongoClient } = require('mongodb');
-require('dotenv').config(); // Load environment variables
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-const url = process.env.MONGODB_URI; // Get MongoDB URI from .env
+const url = process.env.MONGODB_URI;
 const dbName = 'dernSupport';
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('MainPage'));
+app.use(express.static('public'));
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/MainPage/MainPage.html"); // ← show MainPage.html on "/"
+    res.sendFile(__dirname + "/public/MainPage/MainPage.html");
 });
 
 const client = new MongoClient(url, { useUnifiedTopology: true });
