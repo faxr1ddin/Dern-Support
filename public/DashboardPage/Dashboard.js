@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     try {
-        const userResponse = await fetch(`http://localhost:3000/api/user/${currentUserEmail}`);
+        const userResponse = await fetch(`https://dern-support-official-7zzw.onrender.com/api/user/${currentUserEmail}`);
         if (!userResponse.ok) {
             throw new Error('User not found');
         }
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 async function displayRecentRequests(userEmail) {
     try {
-        const response = await fetch(`http://localhost:3000/api/support-requests/${userEmail}`);
+        const response = await fetch(`https://dern-support-official-7zzw.onrender.com/api/support-requests/${userEmail}`);
         if (!response.ok) {
             throw new Error('Failed to fetch requests');
         }
@@ -102,7 +102,7 @@ async function displayRecentRequests(userEmail) {
 
 async function displayAllRequests(userEmail) {
     try {
-        const response = await fetch(`http://localhost:3000/api/support-requests/${userEmail}`);
+        const response = await fetch(`https://dern-support-official-7zzw.onrender.com/api/support-requests/${userEmail}`);
         if (!response.ok) {
             throw new Error('Failed to fetch requests');
         }
