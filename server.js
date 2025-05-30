@@ -151,6 +151,11 @@ const dbName = 'dernSupport';
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static('MainPage'));
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/MainPage/MainPage.html"); // ← show MainPage.html on "/"
+});
 
 const client = new MongoClient(url, { useUnifiedTopology: true });
 
