@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     if (!ticketId) {
         try {
-            const userResponse = await fetch(`http://localhost:3000/api/user/${currentUserEmail}`);
+            const userResponse = await fetch(`https://dern-support-official-7zzw.onrender.com/api/user/${currentUserEmail}`);
             if (userResponse.ok) {
                 const currentUser = await userResponse.json();
                 window.location.href = currentUser.isAdmin
@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     try {
-        const userResponse = await fetch(`http://localhost:3000/api/user/${currentUserEmail}`);
+        const userResponse = await fetch(`https://dern-support-official-7zzw.onrender.com/api/user/${currentUserEmail}`);
         if (!userResponse.ok) {
             throw new Error('User not found');
         }
         const currentUser = await userResponse.json();
 
-        const requestsResponse = await fetch(`http://localhost:3000/api/support-requests`);
+        const requestsResponse = await fetch(`https://dern-support-official-7zzw.onrender.com/api/support-requests`);
         if (!requestsResponse.ok) {
             throw new Error('Failed to fetch requests');
         }
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         alert('Failed to load request details');
         const currentUserEmail = sessionStorage.getItem('currentUser');
         if (currentUserEmail) {
-            const userResponse = await fetch(`http://localhost:3000/api/user/${currentUserEmail}`);
+            const userResponse = await fetch(`https://dern-support-official-7zzw.onrender.com/api/user/${currentUserEmail}`);
             if (userResponse.ok) {
                 const currentUser = await userResponse.json();
                 window.location.href = currentUser.isAdmin
@@ -143,7 +143,7 @@ async function displayRequestDetails(request, currentUser) {
 
     if (currentUser.isAdmin) {
         try {
-            const sparePartsResponse = await fetch(`http://localhost:3000/api/spare-parts/used/${request.ticketId}`);
+            const sparePartsResponse = await fetch(`https://dern-support-official-7zzw.onrender.com/api/spare-parts/used/${request.ticketId}`);
             const sparePartsData = await sparePartsResponse.json();
             const sparePartsCost = sparePartsData.totalCost || request.sparePartsCost || 0;
 
@@ -172,7 +172,7 @@ async function displayRequestDetails(request, currentUser) {
 
 async function updateRequestStatus(ticketId, newStatus) {
     try {
-        const response = await fetch(`http://localhost:3000/api/support-requests/${ticketId}`, {
+        const response = await fetch(`https://dern-support-official-7zzw.onrender.com/api/support-requests/${ticketId}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -187,7 +187,7 @@ async function updateRequestStatus(ticketId, newStatus) {
         const updatedRequest = await response.json();
 
         const currentUserEmail = sessionStorage.getItem('currentUser');
-        const userResponse = await fetch(`http://localhost:3000/api/user/${currentUserEmail}`);
+        const userResponse = await fetch(`https://dern-support-official-7zzw.onrender.com/api/user/${currentUserEmail}`);
         const currentUser = await userResponse.json();
 
         displayRequestDetails(updatedRequest, currentUser);
@@ -208,7 +208,7 @@ async function setFinalPrice(ticketId) {
     }
 
     try {
-        const response = await fetch(`http://localhost:3000/api/support-requests/${ticketId}`, {
+        const response = await fetch(`https://dern-support-official-7zzw.onrender.com/api/support-requests/${ticketId}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -223,7 +223,7 @@ async function setFinalPrice(ticketId) {
         const updatedRequest = await response.json();
 
         const currentUserEmail = sessionStorage.getItem('currentUser');
-        const userResponse = await fetch(`http://localhost:3000/api/user/${currentUserEmail}`);
+        const userResponse = await fetch(`https://dern-support-official-7zzw.onrender.com/api/user/${currentUserEmail}`);
         const currentUser = await userResponse.json();
 
         displayRequestDetails(updatedRequest, currentUser);

@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let sparePartsCost = priceEstimates[problemType].sparePartsBase; 
         try {
-            const sparePartsResponse = await fetch(`http://localhost:3000/api/spare-parts/${problemType}`);
+            const sparePartsResponse = await fetch(`https://dern-support-official-7zzw.onrender.com/api/spare-parts/${problemType}`);
             if (sparePartsResponse.ok) {
                 const sparePartsData = await sparePartsResponse.json();
                 sparePartsCost = sparePartsData.cost || sparePartsCost;
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             let sparePartsCost = priceEstimates[problemType].sparePartsBase;
             try {
-                const sparePartsResponse = await fetch(`http://localhost:3000/api/spare-parts/${problemType}`);
+                const sparePartsResponse = await fetch(`https://dern-support-official-7zzw.onrender.com/api/spare-parts/${problemType}`);
                 if (sparePartsResponse.ok) {
                     const sparePartsData = await sparePartsResponse.json();
                     sparePartsCost = sparePartsData.cost || sparePartsCost;
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             try {
-                const response = await fetch('http://localhost:3000/api/support-requests', {
+                const response = await fetch('https://dern-support-official-7zzw.onrender.com/api/support-requests', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

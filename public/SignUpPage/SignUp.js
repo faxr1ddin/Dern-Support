@@ -57,7 +57,7 @@ async function handleSignup(event) {
     });
 
     try {
-        const response = await fetch('http://localhost:3000/auth/register', {
+        const response = await fetch('https://dern-support-official-7zzw.onrender.com/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
