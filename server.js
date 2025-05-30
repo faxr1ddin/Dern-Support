@@ -7,7 +7,10 @@ app.listen(port, () => {
     console.log(`Server running at port ${port}`);
 });
 
-const url = process.env.MONGODB_URI || 'mongodb+srv://dern-support-admin:<db_password>@cluster0.2nivx1g.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+// const url = process.env.MONGODB_URI || 'mongodb+srv://dern-support-admin:<db_password>@cluster0.2nivx1g.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+// const dbName = 'dernSupport';
+
+const url = 'mongodb://localhost:27017';
 const dbName = 'dernSupport';
 
 app.use(cors());
